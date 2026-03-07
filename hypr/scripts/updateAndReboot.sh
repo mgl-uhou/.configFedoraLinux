@@ -5,10 +5,10 @@ echo "Checking for updates..."
 # Checks which system is running (Fedora or Arch) and executes the correct manager.
 
 if [ -f /etc/fedora-release ]; then
-    notify-send -u normal "Update started" "The system update was started now."
+    notify-send -u normal "Update started" "The system is going to update now."
     sudo dnf upgrade --refresh -y
 elif [ -f /etc/arch-release ]; then
-    notify-send -u normal "Update started" "The system update was started now."
+    notify-send -u normal "Update started" "The system is going to update now."
     sudo pacman -Syu --noconfirm
 else
     echo "System not recognised. Cancelling operation."
