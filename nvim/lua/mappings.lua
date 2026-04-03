@@ -7,6 +7,13 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { 
+  desc = "Toggle Markdown Preview (Navegador)" 
+})
+map("n", "<leader>mr", "<cmd>RenderMarkdown toggle<CR>", { 
+  desc = "Toggle Render Markdown (In-buffer)" 
+})
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 --
 -- -- Mapeamento para abrir o LazyGit em modo flutuante

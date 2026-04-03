@@ -13,6 +13,22 @@ return {
     end,
   },
 
+  -- Visualização no Navegador
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = "cd app && yarn install",
+  },
+
+  -- Visualização Direta no Neovim (In-buffer)
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown", "quarto", "rmd" },
+    opts = {}, -- Aceita as configurações padrão
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
